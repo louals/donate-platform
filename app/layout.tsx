@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
+import Providers from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS app",
-  description: "Track real-time stock prices, get personalized alerts and explore detailed company insights.",
+  icons: {
+    icon: "/logo.png",
+  },
+  title: "Donate | La Plateforme Communautaire de Don en Algérie",
+  description:
+    "Une plateforme premium pour les Algériens pour donner des objets, demander de l'aide et faire du bénévolat. Construisons ensemble une meilleure communauté.",
 };
 
 export default function RootLayout({
@@ -23,11 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-white text-slate-900 antialiased`}
       >
-        {children}
+        <Providers>{children}</Providers>
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );

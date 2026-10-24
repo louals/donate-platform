@@ -123,18 +123,18 @@
   --color-gray-900: #050505;
   --color-gray-800: #141414;
   --color-gray-700: #212328;
-  --color-gray-600: #30333A;
-  --color-gray-500: #9095A1;
-  --color-gray-400: #CCDADC;
+  --color-gray-600: #30333a;
+  --color-gray-500: #9095a1;
+  --color-gray-400: #ccdadc;
 
   /* Vibrant Colors */
-  --color-blue-600: #5862FF;
-  --color-yellow-400: #FDD458;
-  --color-yellow-500: #E8BA40;
-  --color-teal-400: #0FEDBE;
-  --color-red-500: #FF495B;
-  --color-orange-500: #FF8243;
-  --color-purple-500: #D13BFF;
+  --color-blue-600: #5862ff;
+  --color-yellow-400: #fdd458;
+  --color-yellow-500: #e8ba40;
+  --color-teal-400: #0fedbe;
+  --color-red-500: #ff495b;
+  --color-orange-500: #ff8243;
+  --color-purple-500: #d13bff;
 }
 
 @layer base {
@@ -142,7 +142,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gray-900 text-foreground;
+    @apply text-foreground bg-gray-900;
   }
 }
 
@@ -175,15 +175,15 @@
 }
 
 .scrollbar-hide-default:hover {
-  scrollbar-color: #30333A transparent;
+  scrollbar-color: #30333a transparent;
 }
 
 .scrollbar-hide-default:hover::-webkit-scrollbar-thumb {
-  background-color: #30333A;
+  background-color: #30333a;
 }
 
 .scrollbar-hide-default::-webkit-scrollbar-thumb:hover {
-  background-color: #9095A1;
+  background-color: #9095a1;
 }
 
 @layer base {
